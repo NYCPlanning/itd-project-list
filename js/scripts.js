@@ -5,7 +5,7 @@ $.getJSON('./data/projects.json', function(projects) {
     // build out a list item with project info
     const listItem = `
       <div class="list-item">
-        <h4>${project.id}</h4> <br/>
+        <h3>${project.id}</h3> <br/>
         <p>${project.description}</p>
       </div>
     `;
