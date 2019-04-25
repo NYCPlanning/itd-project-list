@@ -13,9 +13,12 @@ $.getJSON('./data/projects.json', function(projects) {
     // append the list item to the projects list div
     $('#projects-list').append(listItem);
   });
-});
 
-// bind a callback
-$('#description').on('click', function() {
-  alert('clicked!');
+  // iterate over the keys in the data
+  Object.keys(projects[0]).forEach(key => {
+    // bind a callback
+    $(`#${key}`).on('click', function() {
+      alert('clicked!');
+    });
+  });
 });
