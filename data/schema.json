@@ -11,7 +11,7 @@
       },
       "description": {
          "description": "The description of the product",
-         "type": "string",
+         "type": "string"
       },
       "category": {
          "type": "string",
@@ -22,6 +22,20 @@
          "type": "string",
          "description": "The team who develops the product",
           "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
+      },
+      "PublicFacing": {
+         "type": "boolean",
+         "description": "This describes whether product is public facing",
+          "enum": ["Y", "N"]
+      },
+      "CityNet": {
+         "type": "boolean",
+         "description": "This describes whether product require CityNet connection",
+          "enum": ["Y", "N"]
+      },
+      "OpenIssue": {
+         "type": "string",
+         "description": "This describes whether product has any open issue tracking system with its link"
       }
    },
    "required": ["name", "description", "category"]
