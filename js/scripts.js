@@ -14,3 +14,8 @@ $.getJSON('./data/projects.json', function(projects) {
     $('#projects-list').append(listItem);
   });
 });
+
+// bind a callback
+$('#description').on('click', function() {
+  alert('clicked!');
+});
