@@ -26,16 +26,26 @@ $.getJSON('./data/projects.json', function(projects) {
     // append the list item to the projects list div
     $('#sort-by-buttons').append(button);
 
-    // bind a callback
-    $(`#${key}`).on('click', sortBy.bind(this, key));
+    // bind a sorter callback
+    $(`#${key}`).on('click', sortBy.bind(null, key));
   });
 });
 
-function sortBy(key, mouseEvent) {
+function sortBy(key) {
+  this.isAsc = !this.isAsc;
+
   const orderedDivs = $('.list-item').sort(function(a,b) {
     const orderKeySelector = `.project--${key}`;
-    return $(a).find(orderKeySelector).text()
-      < $(b).find(orderKeySelector).text();
+
+    const direction = (function() {
+      if (isAsc) {
+        return $(a).find(orderKeySelector).text() < $(b).find(orderKeySelector).text();
+      } else {
+        return $(a).find(orderKeySelector).text() > $(b).find(orderKeySelector).text();
+      }
+    })();
+
+    return direction;
   });
 
   $('#projects-list').html(orderedDivs);
