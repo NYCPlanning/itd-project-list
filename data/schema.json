@@ -6,20 +6,23 @@
 
    "properties": {
       "name": {
-         "description": "The unique identifier for a product",
+         "description": "The unique identifier for a product, which is the common name",
          "type": "string"
       },
       "description": {
-         "description": "Name of the product",
+         "description": "The description of the product",
          "type": "string",
       },
       "category": {
-         "type": "number",
-         "minimum": 0,
-         "exclusiveMinimum": true,
-          "enum": ["red", "amber", "green"]
+         "type": "string",
+         "description": "The type of product",
+          "enum": ["web app", "data product", "desktop app", "API", "service", "script"]
+      },
+      "techprodowner": {
+         "type": "string",
+         "description": "The team who develops the product",
+          "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
       }
    },
-
-   "required": ["id", "name", "price"]
+   "required": ["name", "description", "category"]
 }
