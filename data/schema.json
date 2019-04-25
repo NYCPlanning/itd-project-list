@@ -36,7 +36,6 @@
          "type": "string",
          "description": "the link for the product",
           "type": "string",
-          "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
       }
    },
    "required": ["name", "description", "category"]
