@@ -5,8 +5,8 @@ $.getJSON('./data/projects.json', function(projects) {
     // build out a list item with project info
     const listItem = `
       <div class="list-item">
-        <h3>${project.id}</h3> <br/>
-        <p>${project.description}</p>
+        <h3 class="project--id">${project.id}</h3> <br/>
+        <p class="project--description">${project.description}</p>
       </div>
     `;
 
@@ -32,5 +32,11 @@ $.getJSON('./data/projects.json', function(projects) {
 });
 
 function sortBy(key, mouseEvent) {
-  alert(key);
+  const orderedDivs = $('.list-item').sort(function(a,b) {
+    const orderKeySelector = `.project--${key}`;
+    return $(a).find(orderKeySelector).text()
+      < $(b).find(orderKeySelector).text();
+  });
+
+  $('#projects-list').html(orderedDivs);
 }
