@@ -21,12 +21,12 @@
       "Is_public": {
          "type": "boolean",
          "description": "Is thisrepo public",
-          "enum": ["Y", "N"]
+          "enum": ["true", "false"]
       },
       "Has_document": {
          "type": "boolean",
          "description": "Does repo have required documents",
-          "enum": ["Y", "N"]
+          "enum": ["true", "false"]
       },
       "techprodowner": {
          "type": "string",
