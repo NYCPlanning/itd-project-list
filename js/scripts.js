@@ -27,8 +27,10 @@ $.getJSON('./data/projects.json', function(projects) {
     $('#sort-by-buttons').append(button);
 
     // bind a callback
-    $(`#${key}`).on('click', function() {
-      alert(key);
-    });
+    $(`#${key}`).on('click', sortBy.bind(this, key));
   });
 });
+
+function sortBy(key, mouseEvent) {
+  alert(key);
+}
