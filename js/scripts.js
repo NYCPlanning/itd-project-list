@@ -14,16 +14,18 @@ $.getJSON('./data/projects.json', function(projects) {
     $('#projects-list').append(listItem);
   });
 
-  const [firstProject] = projects;
+  // we grab the first project from the list, and assume
+  // the rest of the projects have the same object structure
+  const [someProject] = projects;
 
   // iterate over the keys in the data
-  Object.keys(firstProject).forEach(key => {
+  Object.keys(someProject).forEach(key => {
     // append a sort button for each key with ID
     const button = `
       <button id="${key}">${key}</button>
     `;
 
-    // append the list item to the projects list div
+    // append the button to the sort div's container
     $('#sort-by-buttons').append(button);
 
     // bind a sorter callback
