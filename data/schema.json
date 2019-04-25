@@ -18,11 +18,22 @@
          "description": "The type of product",
           "enum": ["web app", "data product", "desktop app", "API", "service", "script"]
       },
+      "Is_public": {
+         "type": "boolean",
+         "description": "Is thisrepo public",
+          "enum": ["Y", "N"]
+      },
+      "Has_document": {
+         "type": "boolean",
+         "description": "Does repo have required documents",
+          "enum": ["Y", "N"]
+      },
       "techprodowner": {
          "type": "string",
          "description": "The team who develops the product",
           "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
       }
+
    },
    "required": ["name", "description", "category"]
 }
