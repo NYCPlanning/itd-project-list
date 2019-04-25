@@ -1,5 +1,30 @@
 .list-item {
-  border: 1px solid gray;
   padding: 15px;
-  margin-bottom: 15px;
+  /* border: 1px solid gray;
+  padding: 15px;
+  margin-bottom: 15px; */
+}
+
+.list-item:nth-child(even) {
+  background-color: #EEE;
+}
+
+.list-item + .list-item {
+  border-top: 1px solid grey;
+}
+
+.project-title {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.list-item-meta {
+  list-style: None;
+  margin: 0;
+  clear: both;
+}
+
+.list-item-meta li {
+  display: inline-block;
+  padding-right: 10px;
 }

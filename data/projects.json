@@ -1,7 +1,8 @@
 [
   {
     "id": "project-1",
-    "description": "Description for project 1"
+    "description": "Description for project 1",
+    "requiresCityNet": true
   },
   {
     "id": "project-2",
