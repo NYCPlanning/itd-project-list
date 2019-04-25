@@ -22,6 +22,21 @@
          "type": "string",
          "description": "The team who develops the product",
           "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
+      },
+      "busowner": {
+         "description": "The Business Owner of the product",
+         "type": "string",
+      },
+      "languages": {
+         "type": "string",
+         "description": "The languages of product",
+          "type": "string",
+      },
+      "url": {
+         "type": "string",
+         "description": "the link for the product",
+          "type": "string",
+          "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
       }
    },
    "required": ["name", "description", "category"]
