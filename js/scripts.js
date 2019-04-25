@@ -14,11 +14,21 @@ $.getJSON('./data/projects.json', function(projects) {
     $('#projects-list').append(listItem);
   });
 
+  const [firstProject] = projects;
+
   // iterate over the keys in the data
-  Object.keys(projects[0]).forEach(key => {
+  Object.keys(firstProject).forEach(key => {
+    // append a sort button for each key with ID
+    const button = `
+      <button id="${key}">${key}</button>
+    `;
+
+    // append the list item to the projects list div
+    $('#sort-by-buttons').append(button);
+
     // bind a callback
     $(`#${key}`).on('click', function() {
-      alert('clicked!');
+      alert(key);
     });
   });
 });
