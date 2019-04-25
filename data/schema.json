@@ -1,0 +1,25 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "Product",
+   "description": "A product in ITD's portfolio",
+   "type": "object",
+
+   "properties": {
+      "name": {
+         "description": "The unique identifier for a product",
+         "type": "string"
+      },
+      "description": {
+         "description": "Name of the product",
+         "type": "string",
+      },
+      "category": {
+         "type": "number",
+         "minimum": 0,
+         "exclusiveMinimum": true,
+          "enum": ["red", "amber", "green"]
+      }
+   },
+
+   "required": ["id", "name", "price"]
+}
