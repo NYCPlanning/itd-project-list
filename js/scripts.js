@@ -31,14 +31,20 @@ $.getJSON('./data/projects.json', function(projects) {
   });
 });
 
+// generic sort-by function
 function sortBy(key) {
-  this.isAsc = !this.isAsc;
+  // instance variable, containing the bound functions last sort direction
+  this.isAscending = !this.isAscending;
 
+  // DOM selection of the current projects, sorted according to:
+  //  - the clicked key's text contents
+  //  - the current direction
   const orderedDivs = $('.list-item').sort(function(a,b) {
     const orderKeySelector = `.project--${key}`;
 
+    // immediately compute the direction according to the current direction
     const direction = (function() {
-      if (isAsc) {
+      if (isAscending) {
         return $(a).find(orderKeySelector).text() < $(b).find(orderKeySelector).text();
       } else {
         return $(a).find(orderKeySelector).text() > $(b).find(orderKeySelector).text();
@@ -48,5 +54,6 @@ function sortBy(key) {
     return direction;
   });
 
+  // replace the contents of the list with the new sorted divs
   $('#projects-list').html(orderedDivs);
 }
