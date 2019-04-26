@@ -11,7 +11,7 @@
       },
       "description": {
          "description": "The description of the product",
-         "type": "string",
+         "type": "string"
       },
       "category": {
          "type": "string",
@@ -36,7 +36,33 @@
          "type": "string",
          "description": "the link for the product",
           "type": "string",
-      }
+      },
+      "PublicFacing": {
+         "type": "boolean",
+         "description": "This describes whether product is public facing",
+          "enum": ["Y", "N"]
+      },
+      "CityNet": {
+         "type": "boolean",
+         "description": "This describes whether product require CityNet connection",
+          "enum": ["Y", "N"]
+      },
+      "OpenIssue": {
+         "type": "string",
+         "description": "This describes whether product has any open issue tracking system with its link"
+       },
+       "Is_public": {
+          "type": "boolean",
+          "description": "Is thisrepo public",
+           "enum": ["true", "false"]
+       },
+       "Has_document": {
+          "type": "boolean",
+          "description": "Does repo have required documents",
+           "enum": ["true", "false"]
+       },
+
+
    },
    "required": ["name", "description", "category"]
 }
