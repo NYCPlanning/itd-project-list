@@ -9,7 +9,7 @@ $.getJSON('./data/projects.json', function(projects) {
   Object.keys(someProject).forEach(function(key, index) {
     // append each sort button
     $('#project-sort-buttons').append(`
-      <button id="project-${key}">${key}</button>
+      <button class="button small sort-button" id="project-${key}">${key}</button>
     `);
 
     // bind a click event to each sort button
