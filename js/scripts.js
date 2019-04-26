@@ -13,7 +13,7 @@ $.getJSON('./data/projects.json', function(projects) {
     `);
 
     // bind a click event to each sort button
-    $(`#project-${key}`).on('click', sortBy.bind(null, key, projects));
+    $(`#project-${key}`).on('click', sortBy.bind({}, key, projects));
   });
 });
 
@@ -52,5 +52,13 @@ function sortBy(key, projects) {
       }
     }
   });
-  render(sortedProjects);
+
+  // show spinner, hide content
+  $('#projects-list').hide();
+
+  setTimeout(function() {
+    // hide spinner show content
+    $('#projects-list').show();
+    render(sortedProjects)
+  }, 50)
 }
