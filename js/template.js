@@ -3,7 +3,7 @@ function renderListItemTemplate(project) {
 
   return `
     <div class="list-item">
-      <h3 class="project-title">${project.id}</h3>
+      <h3 class="project-title">${project.name}</h3>
       <p class="project-description">${project.description}</p>
       <ul class="list-item-meta">
         <li>web app</li>

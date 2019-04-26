@@ -3,26 +3,65 @@
    "title": "Product",
    "description": "A product in ITD's portfolio",
    "type": "object",
-
    "properties": {
       "name": {
          "description": "The unique identifier for a product, which is the common name",
-         "type": "string"
+         "type": "string",
+         "sortButtonName": "Product Name"
       },
       "description": {
          "description": "The description of the product",
-         "type": "string",
+         "type": "string"
       },
       "category": {
          "type": "string",
          "description": "The type of product",
           "enum": ["web app", "data product", "desktop app", "API", "service", "script"]
       },
-      "techprodowner": {
+      "techOwner": {
          "type": "string",
          "description": "The team who develops the product",
           "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
-      }
+      },
+      "busOwner": {
+         "description": "The Business Owner of the product",
+         "type": "string",
+      },
+      "language": {
+         "type": "string",
+         "description": "The languages of product",
+          "type": "string",
+      },
+      "url": {
+         "type": "string",
+         "description": "the link for the product",
+          "type": "string",
+      },
+      "publicRepo": {
+         "type": "string",
+         "description": "the link for the product",
+          "type": "string",
+      },
+      "publicRepo": {
+         "type": "string",
+         "description": "the link for the product",
+          "type": "string",
+      },
+      "repoDocs": {
+         "type": "boolean",
+         "description": "This describes whether product is public facing",
+          "enum": ["Y", "N"]
+      },
+      "cityNet": {
+         "type": "boolean",
+         "description": "This describes whether product require CityNet connection",
+          "enum": ["Y", "N"]
+      },
+      "issueTracker": {
+         "type": "string",
+         "description": "This describes whether product has any open issue tracking system with its link"
+       }
+
    },
    "required": ["name", "description", "category"]
 }

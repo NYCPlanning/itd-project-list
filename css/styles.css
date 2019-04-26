@@ -1,8 +1,22 @@
+#project-sort-buttons {
+  padding: 15px;
+}
+
+.sort-button {
+  background-color: #e3e7ed;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.sort-button:hover,
+.sort-button:focus {
+  background-color: green;
+}
+
 .list-item {
   padding: 15px;
-  /* border: 1px solid gray;
-  padding: 15px;
-  margin-bottom: 15px; */
 }
 
 .list-item:nth-child(even) {
