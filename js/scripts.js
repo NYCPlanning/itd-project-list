@@ -52,5 +52,13 @@ function sortBy(key, projects) {
       }
     }
   });
-  render(sortedProjects);
+
+  // show spinner, hide content
+  $('#projects-list').hide();
+
+  setTimeout(function() {
+    // hide spinner show content
+    $('#projects-list').show();
+    render(sortedProjects)
+  }, 50)
 }
