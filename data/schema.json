@@ -11,7 +11,7 @@
       },
       "description": {
          "description": "The description of the product",
-         "type": "string",
+         "type": "string"
       },
       "category": {
          "type": "string",
@@ -22,6 +22,10 @@
          "type": "string",
          "description": "The team who develops the product",
           "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
+      },
+      "publicfacing": {
+         "type": "string",
+         "description": "The team who develops the product",
       }
    },
    "required": ["name", "description", "category"]
