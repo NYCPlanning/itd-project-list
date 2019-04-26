@@ -3,5 +3,8 @@
   "cacheDirectories": ["node_modules"],
   "engines": {
     "node": "8.*"
+  },
+  "scripts": {
+    "test": "echo 0"
   }
 }
