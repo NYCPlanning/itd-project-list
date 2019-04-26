@@ -14,54 +14,55 @@
          "type": "string"
       },
       "category": {
-         "type": "string",
          "description": "The type of product",
-          "enum": ["web app", "data product", "desktop app", "API", "service", "script"]
+         "type": "string",
+         "sortButtonName": "Category",
+         "enum": ["web app", "data product", "desktop app", "API", "service", "script"]
       },
       "techOwner": {
-         "type": "string",
          "description": "The team who develops the product",
+         "type": "string",
+         "sortButtonName": "Tech Owner",
           "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
       },
       "busOwner": {
          "description": "The Business Owner of the product",
          "type": "string",
+         "sortButtonName": "Business Owner"
       },
       "language": {
-         "type": "string",
-         "description": "The languages of product",
-          "type": "string",
+        "description": "The languages of product",
+        "type": "string",
+        "sortButtonName": "Language"
       },
       "url": {
-         "type": "string",
-         "description": "the link for the product",
+         "description": "the link for the product repositories",
           "type": "string",
+          "sortButtonName": "Repo URL"
       },
       "publicRepo": {
-         "type": "string",
          "description": "the link for the product",
-          "type": "string",
-      },
-      "publicRepo": {
-         "type": "string",
-         "description": "the link for the product",
-          "type": "string",
+         "type": "boolean",
+         "sortButtonName": "Public Repository"
       },
       "repoDocs": {
-         "type": "boolean",
          "description": "This describes whether product is public facing",
-          "enum": ["Y", "N"]
+         "type": "boolean"
+      },
+      "publicProduct": {
+        "description": "This indicates whether product is Public",
+        "type": "boolean",
+        "sortButtonName": "Public Product"
       },
       "cityNet": {
-         "type": "boolean",
          "description": "This describes whether product require CityNet connection",
-          "enum": ["Y", "N"]
+         "type": "boolean",
+         "sortButtonName": "CityNet"
       },
       "issueTracker": {
-         "type": "string",
-         "description": "This describes whether product has any open issue tracking system with its link"
+        "description": "This describes whether product has any open issue tracking system with its link",
+         "type": "string"
        }
-
-   },
+    },
    "required": ["name", "description", "category"]
 }
