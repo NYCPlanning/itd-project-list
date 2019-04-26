@@ -13,3 +13,7 @@ If using atom editor, you can use the package `atom-live-server` to start a loca
 ### Running a server with python
 
 In your terminal, navigate to this repo's directory.  Run `python -m SimpleHTTPServer 3000` if you have python 2 installed.  If you have python 3, run `http.server 3000`. Go to `http://localhost:3000` in your browser.
+
+## ITD Hackathon
+
+This project was first developed during the ITD Hackathon on 25-26 April 2019.  Contributors from all over ITD broke up into teams (Deployment, Packaging, Design, and Sort) and contributed code over two days. 
