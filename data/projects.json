@@ -9,7 +9,7 @@
     "url": "",
     "publicRepo": "",
     "repoDocs": "",
-    "publicProduct": ,
+    "publicProduct": false,
     "cityNet": "",
     "issueTracker": ""
   },
@@ -24,7 +24,7 @@
     "publicRepo": "",
     "repoDocs": "",
     "publicProduct": false,
-    "cityNet": ,
+    "cityNet": true,
     "issueTracker": ""
   },
   {
@@ -35,7 +35,7 @@
     "busOwner": "Zoning",
     "language": "Drupal",
     "url": "https://github.com/nycplanning-internal/nyc-zoning-resolution",
-    "publicRepo": ,
+    "publicRepo": false,
     "repoDocs": true,
     "publicProduct": true,
     "cityNet": false,
@@ -610,7 +610,7 @@
     "language": "Python 2",
     "url": "X:\\GSS\\Adrian\\Scripts\\MapPLUTOArchive\\scripts",
     "publicRepo": false,
-    "repoDocs": ,
+    "repoDocs": false,
     "publicProduct": false,
     "cityNet": "",
     "issueTracker": ""
