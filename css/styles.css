@@ -13,10 +13,7 @@
   border-top: 1px solid grey;
 }
 
-.project-title {
-  float: left;
-  margin: 0 15px 0 0;
-}
+.project-title {}
 
 .list-item-meta {
   list-style: None;
@@ -26,8 +23,14 @@
 
 .list-item-meta li {
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 30px;
   position: relative;
+}
+
+.list-item-meta li strong {
+  display: block;
+  font-size: 0.75em;
+  color: #666;
 }
 
 .tooltip {
