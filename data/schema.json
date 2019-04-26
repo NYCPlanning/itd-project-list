@@ -1,0 +1,28 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "Product",
+   "description": "A product in ITD's portfolio",
+   "type": "object",
+
+   "properties": {
+      "name": {
+         "description": "The unique identifier for a product, which is the common name",
+         "type": "string"
+      },
+      "description": {
+         "description": "The description of the product",
+         "type": "string",
+      },
+      "category": {
+         "type": "string",
+         "description": "The type of product",
+          "enum": ["web app", "data product", "desktop app", "API", "service", "script"]
+      },
+      "techprodowner": {
+         "type": "string",
+         "description": "The team who develops the product",
+          "enum": ["web", "geo", "labs", "edm", "special projects", "AD"]
+      }
+   },
+   "required": ["name", "description", "category"]
+}
