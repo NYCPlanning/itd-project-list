@@ -1,0 +1,7 @@
+{
+  "license": "MIT",
+  "cacheDirectories": ["node_modules"],
+  "engines": {
+    "node": "8.*"
+  }
+}
