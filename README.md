@@ -1,5 +1,7 @@
 # itd-project-list
 
+[![CircleCI](https://circleci.com/gh/NYCPlanning/itd-project-list.svg?style=svg)](https://circleci.com/gh/NYCPlanning/itd-project-list)
+
 A listing of ITD projects
 
 ## Development Environment
