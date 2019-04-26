@@ -27,4 +27,22 @@
 .list-item-meta li {
   display: inline-block;
   padding-right: 10px;
+  position: relative;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #EEE;
+  padding: 5px;
+  font-size: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0, 0.2);
+  right: 50%;
+  bottom: 100%;
+  transform: translateX(50%);
+  white-space: nowrap;
+}
+
+.list-item-meta li:hover .tooltip {
+  display: block;
 }
